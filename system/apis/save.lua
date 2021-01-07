@@ -15,3 +15,11 @@ end
 function readSaves()
 	return fs.list("/save")
 end
+function delSav(id)
+	if fs.exists("/save/"..tostring(id)) then
+		fs.delete("/save/"..tostring(id))
+		return true
+	else
+		return false
+	end
+end
