@@ -15,7 +15,16 @@ while true do
 		end
 		savsel = menu.doMenu(title,savesn)
 		title = savesn[savsel]
-		menu.doMenu(title,{"Back","Copy","Move","Erase"})
+		sop = menu.doMenu(title,{"Back","Copy","Move","Erase"})
+		if sop == 1 then
+		end
+		if sop == 2 then
+		end
+		if sop == 3 then
+		end
+		if sop == 4 then
+			save.delSav(saves[savsel])
+		end
 		title = "Save Data"
 	end
 end
