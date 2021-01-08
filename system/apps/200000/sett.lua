@@ -11,5 +11,10 @@ while true do
     end
 	if sel == 3 then
 		updsel = menu.doMenu("System Update",{"Update via Internet","Install from disk"})
+		if updsel == 1 then
+			shell.dir("")
+			shell.run("gitget TheRealEli310 cbox main")
+			os.reboot()
+		end
 	end
 end
