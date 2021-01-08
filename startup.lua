@@ -24,7 +24,7 @@ end
 bootAnim()
 os.loadAPI("/system/apis/save.lua")
 os.loadAPI("/system/apis/dlp.lua")
-os.loadAPI("/system/apis/d3d.lua")
+os.loadAPI("/system/apis/threed.lua")
 --os.loadAPI("/system/rsa")
 --logm.write("Starting Dashboard\n")
 function os.version()
