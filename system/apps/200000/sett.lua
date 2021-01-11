@@ -18,6 +18,9 @@ while true do
 	end
     end
     if sel == 4 then
-	menu.doInfoScreen("Insert recovery disk and press ENTER.")
+	menu.doInfoScreen("Are you sure? Press ENTER to continue or hold CTRL+R to cancel.")
+	fs.delete("/save")
+	shell.run("set setup.done false")
+	os.reboot()
     end
 end
