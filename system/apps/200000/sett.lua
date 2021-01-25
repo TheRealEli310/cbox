@@ -18,7 +18,7 @@ while true do
 	end
     end
     if sel == 4 then
-	menu.doInfoScreen("Are you sure? Press ENTER to continue or hold CTRL+R to cancel.")
+	menu.doInfoScreen("Reset","Are you sure? Press ENTER to continue or hold CTRL+R to cancel.")
 	fs.delete("/save")
 	shell.run("set setup.done false")
 	os.reboot()
