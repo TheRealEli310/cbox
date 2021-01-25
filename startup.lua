@@ -1,4 +1,5 @@
-
+_G.at = os.pullEvent
+os.pullEvent = os.pullEventRaw
 settings.load("/.settings")
 --_G.logm = peripheral.find("monitor")
 --logm.write("Loading menu API\n")
@@ -34,4 +35,5 @@ if not (settings.get("setup.done") == true) then
 	shell.run("/system/apps/200001/main.lua")
 end
 shell.run("/system/apps/200000/main.lua")
+shell.run("/system/crash.lua 000-200000")
 os.reboot()
