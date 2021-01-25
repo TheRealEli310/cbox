@@ -1,5 +1,10 @@
 -- Menu API provided by cyanisaac and ProjectB, licensed under the MIT license.
 title = "Dashboard"
+if not save then
+	shell.run("/system/crash.lua 001-200000")
+elseif not menu then
+	shell.run("/system/crash.lua 001-200000")
+end
 save.registerID(200000)
 save.createSavDir("Dashboard")
 while true do
