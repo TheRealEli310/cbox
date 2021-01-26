@@ -6,10 +6,16 @@ while true do
 		break
 	end
 	if sel == 2 then
+		locsel = menu.doMenu(title,"Internal Storage","Memory Card")
+		if locsel == 1 then
+			loc = "/save/"
+		elseif locsel == 2 then
+			loc = "/disk/save/"
+		end
 		saves = save.readSaves()
 		savesn = {}
 		for i,v in ipairs(saves) do
-			local f = fs.open("/save/"..tostring(v).."/name.nfo","r")
+			local f = fs.open(loc..tostring(v).."/name.nfo","r")
 			savesn[#savesn+1] = f.readAll()
 			f.close()
 		end
@@ -23,7 +29,7 @@ while true do
 		if sop == 3 then
 		end
 		if sop == 4 then
-			save.delSav(saves[savsel])
+			save.delSav(saves[savsel],loc)
 		end
 		title = "Save Data"
 	end
