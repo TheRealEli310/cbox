@@ -12,8 +12,8 @@ end
 function registerID(id)
 	_G.running = id
 end
-function readSaves()
-	return fs.list("/save")
+function readSaves(loc)
+	return fs.list(loc)
 end
 function delSav(id,loc)
 	if fs.exists(loc..tostring(id)) then
