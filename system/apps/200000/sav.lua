@@ -12,7 +12,7 @@ while true do
 		elseif locsel == 2 then
 			loc = "/disk/save/"
 		end
-		saves = save.readSaves()
+		saves = save.readSaves(loc)
 		savesn = {}
 		for i,v in ipairs(saves) do
 			local f = fs.open(loc..tostring(v).."/name.nfo","r")
