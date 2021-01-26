@@ -15,9 +15,9 @@ end
 function readSaves()
 	return fs.list("/save")
 end
-function delSav(id)
-	if fs.exists("/save/"..tostring(id)) then
-		fs.delete("/save/"..tostring(id))
+function delSav(id,loc)
+	if fs.exists(loc..tostring(id)) then
+		fs.delete(loc..tostring(id))
 		return true
 	else
 		return false
