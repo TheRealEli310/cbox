@@ -25,6 +25,11 @@ while true do
 		if sop == 1 then
 		end
 		if sop == 2 then
+			if loc == "/save/" then
+				fs.copy(loc..saves[savsel].."/disk/save/")
+			elseif loc == "/disk/save/" then
+				fs.copy(loc..saves[savsel].."/save/")
+			end
 		end
 		if sop == 3 then
 		end
