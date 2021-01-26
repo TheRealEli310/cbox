@@ -6,7 +6,7 @@ while true do
 		break
 	end
 	if sel == 2 then
-		locsel = menu.doMenu(title,"Internal Storage","Memory Card")
+		locsel = menu.doMenu(title,{"Internal Storage","Memory Card"})
 		if locsel == 1 then
 			loc = "/save/"
 		elseif locsel == 2 then
