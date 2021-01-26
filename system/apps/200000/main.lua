@@ -1,7 +1,5 @@
 -- Menu API provided by cyanisaac and ProjectB, licensed under the MIT license.
 title = "Dashboard"
---???
-cEwaDo = 0
 if not save then
 	shell.run("/system/crash.lua 001-200000")
 elseif not menu then
@@ -20,10 +18,6 @@ while true do
 			bootAnim()
         else
             menu.doInfoScreen(title,"No disk inserted!")
-	    cEwaDo = cEwaDo + 1
-	    if cEwaDo == 10 then
-	        shell.run("/system/crash.lua 666-666666")
-	    end
         end
     end
     if sel == 2 then
